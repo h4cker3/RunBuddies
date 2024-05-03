@@ -13,7 +13,7 @@ class Users(SqlAlchemyBase, UserMixin):
     email = sqla.Column(sqla.String(300), unique=True)
     password = sqla.Column(sqla.String(300))
     link = sqla.Column(sqla.String(300), nullable=True)
-    penalty = sqla.Column(sqla.Integer, nullable=True)
+    penalty = sqla.Column(sqla.Integer, nullable=True, default=0)
     trophies = sqla.Column(sqla.String(3000), nullable=True)
     events = sqla.Column(sqla.String(3000), nullable=True)
     bio = sqla.Column(sqla.String(3000), nullable=True)
