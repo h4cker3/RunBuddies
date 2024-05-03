@@ -9,7 +9,7 @@ class Users(SqlAlchemyBase, UserMixin):
     __tablename__ = 'users'
     id = sqla.Column(sqla.Integer,
                      primary_key=True, autoincrement=True)
-    name = sqla.Column(sqla.String(300), unique=True)
+    name = sqla.Column(sqla.String(300))
     email = sqla.Column(sqla.String(300), unique=True)
     password = sqla.Column(sqla.String(300))
     link = sqla.Column(sqla.String(300), nullable=True)
